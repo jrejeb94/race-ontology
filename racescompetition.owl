@@ -1,14 +1,4 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE Ontology [
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.semanticweb.org/intissare/ontologies/2018/9/racescompetition.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -16,10 +6,12 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/intissare/ontologies/2018/9/racescompetition.owl">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/intissare/ontologies/2018/9/racescompetition.owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
         <Class IRI="#Agent"/>
     </Declaration>
@@ -172,6 +164,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#referees"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#wins"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#MessengerID"/>
@@ -354,7 +349,7 @@
         <Class IRI="#Prologue"/>
         <DataHasValue>
             <DataProperty IRI="#isFirstStage"/>
-            <Literal datatypeIRI="&xsd;boolean">true</Literal>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
         </DataHasValue>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -766,7 +761,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#composedOf"/>
         <NamedIndividual IRI="#Race2"/>
-        <NamedIndividual IRI="#RandomStage2"/>
+        <NamedIndividual IRI="#Prologue1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#composedOf"/>
@@ -776,7 +771,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#composedOf"/>
         <NamedIndividual IRI="#Race2"/>
-        <NamedIndividual IRI="#RandomStage4"/>
+        <NamedIndividual IRI="#RandomStage2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#composedOf"/>
@@ -786,7 +781,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#composedOf"/>
         <NamedIndividual IRI="#Race2"/>
-        <NamedIndividual IRI="#Prologue1"/>
+        <NamedIndividual IRI="#RandomStage4"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#OrganisedBy"/>
@@ -796,17 +791,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#composedOf"/>
         <NamedIndividual IRI="#Race3"/>
-        <NamedIndividual IRI="#RandomStage6"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#composedOf"/>
-        <NamedIndividual IRI="#Race3"/>
-        <NamedIndividual IRI="#RandomStage8"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#composedOf"/>
-        <NamedIndividual IRI="#Race3"/>
-        <NamedIndividual IRI="#RandomStage7"/>
+        <NamedIndividual IRI="#Prologue2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#composedOf"/>
@@ -816,7 +801,17 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#composedOf"/>
         <NamedIndividual IRI="#Race3"/>
-        <NamedIndividual IRI="#Prologue2"/>
+        <NamedIndividual IRI="#RandomStage6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#composedOf"/>
+        <NamedIndividual IRI="#Race3"/>
+        <NamedIndividual IRI="#RandomStage7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#composedOf"/>
+        <NamedIndividual IRI="#Race3"/>
+        <NamedIndividual IRI="#RandomStage8"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ParticipatesIn"/>
@@ -1026,12 +1021,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#contains"/>
         <NamedIndividual IRI="#Team1"/>
-        <NamedIndividual IRI="#Racer8"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contains"/>
-        <NamedIndividual IRI="#Team1"/>
-        <NamedIndividual IRI="#Racer7"/>
+        <NamedIndividual IRI="#Director1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#contains"/>
@@ -1051,7 +1041,17 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#contains"/>
         <NamedIndividual IRI="#Team1"/>
-        <NamedIndividual IRI="#Director1"/>
+        <NamedIndividual IRI="#Racer7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contains"/>
+        <NamedIndividual IRI="#Team1"/>
+        <NamedIndividual IRI="#Racer8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contains"/>
+        <NamedIndividual IRI="#Team2"/>
+        <NamedIndividual IRI="#Director2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#contains"/>
@@ -1070,382 +1070,389 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#contains"/>
-        <NamedIndividual IRI="#Team2"/>
-        <NamedIndividual IRI="#Director2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contains"/>
         <NamedIndividual IRI="#Team3"/>
-        <NamedIndividual IRI="#Racer6"/>
+        <NamedIndividual IRI="#Director3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#contains"/>
         <NamedIndividual IRI="#Team3"/>
         <NamedIndividual IRI="#Doctor3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contains"/>
-        <NamedIndividual IRI="#Team3"/>
-        <NamedIndividual IRI="#Director3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#contains"/>
         <NamedIndividual IRI="#Team3"/>
         <NamedIndividual IRI="#Racer5"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contains"/>
+        <NamedIndividual IRI="#Team3"/>
+        <NamedIndividual IRI="#Racer6"/>
+    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Director1"/>
-        <Literal datatypeIRI="&xsd;integer">45</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">45</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Director1"/>
-        <Literal datatypeIRI="&xsd;string">Mathieu</Literal>
+        <Literal>Mathieu</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Director1"/>
-        <Literal datatypeIRI="&xsd;string">Française</Literal>
+        <Literal>Française</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Director1"/>
-        <Literal datatypeIRI="&xsd;string">Mireille</Literal>
+        <Literal>Mireille</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Director2"/>
-        <Literal datatypeIRI="&xsd;integer">50</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Director2"/>
-        <Literal datatypeIRI="&xsd;string">Brassens</Literal>
+        <Literal>Brassens</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Director2"/>
-        <Literal datatypeIRI="&xsd;string">Française</Literal>
+        <Literal>Française</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Director2"/>
-        <Literal datatypeIRI="&xsd;string">Georges</Literal>
+        <Literal>Georges</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Director3"/>
-        <Literal datatypeIRI="&xsd;integer">22</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Director3"/>
-        <Literal datatypeIRI="&xsd;string">Addali</Literal>
+        <Literal>Addali</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Director3"/>
-        <Literal datatypeIRI="&xsd;string">Tunisienne</Literal>
+        <Literal>Tunisienne</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Director3"/>
-        <Literal datatypeIRI="&xsd;string">Intissar</Literal>
+        <Literal>Intissar</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Doctor1"/>
-        <Literal datatypeIRI="&xsd;integer">22</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Doctor1"/>
-        <Literal datatypeIRI="&xsd;string">Rejeb</Literal>
+        <Literal>Rejeb</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Doctor1"/>
-        <Literal datatypeIRI="&xsd;string">Tunisienne</Literal>
+        <Literal>Tunisienne</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Doctor1"/>
-        <Literal datatypeIRI="&xsd;string">Jamila</Literal>
+        <Literal>Jamila</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Doctor2"/>
-        <Literal datatypeIRI="&xsd;integer">22</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Doctor2"/>
-        <Literal datatypeIRI="&xsd;string">Abed</Literal>
+        <Literal>Abed</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Doctor2"/>
-        <Literal datatypeIRI="&xsd;string">Tunisienne</Literal>
+        <Literal>Tunisienne</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Doctor2"/>
-        <Literal datatypeIRI="&xsd;string">Dina</Literal>
+        <Literal>Dina</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Doctor3"/>
-        <Literal datatypeIRI="&xsd;integer">22</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Doctor3"/>
-        <Literal datatypeIRI="&xsd;string">Abida</Literal>
+        <Literal>Abida</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Doctor3"/>
-        <Literal datatypeIRI="&xsd;string">Tunisienne</Literal>
+        <Literal>Tunisienne</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Doctor3"/>
-        <Literal datatypeIRI="&xsd;string">Wassim</Literal>
+        <Literal>Wassim</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isFirstStage"/>
         <NamedIndividual IRI="#Prologue1"/>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isFirstStage"/>
         <NamedIndividual IRI="#Prologue2"/>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Racer1"/>
-        <Literal datatypeIRI="&xsd;integer">22</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Racer1"/>
-        <Literal datatypeIRI="&xsd;string">Hadded</Literal>
+        <Literal>Hadded</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Racer1"/>
-        <Literal datatypeIRI="&xsd;string">Italienne
+        <Literal>Italienne
 
 </Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Racer1"/>
-        <Literal datatypeIRI="&xsd;string">Jasseur</Literal>
+        <Literal>Jasseur</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Racer2"/>
-        <Literal datatypeIRI="&xsd;integer">25</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">25</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Racer2"/>
-        <Literal datatypeIRI="&xsd;string">Harzallah
+        <Literal>Harzallah
 </Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Racer2"/>
-        <Literal datatypeIRI="&xsd;string">Italienne
+        <Literal>Italienne
 </Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Racer2"/>
-        <Literal datatypeIRI="&xsd;string">Hassen
+        <Literal>Hassen
 </Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Racer3"/>
-        <Literal datatypeIRI="&xsd;integer">24</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">24</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Racer3"/>
-        <Literal datatypeIRI="&xsd;string">Adjif</Literal>
+        <Literal>Adjif</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Racer3"/>
-        <Literal datatypeIRI="&xsd;string">Japonaise</Literal>
+        <Literal>Japonaise</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Racer3"/>
-        <Literal datatypeIRI="&xsd;string">Cheima</Literal>
+        <Literal>Cheima</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Racer4"/>
-        <Literal datatypeIRI="&xsd;integer">26</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">26</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Racer4"/>
-        <Literal datatypeIRI="&xsd;string">Aguili</Literal>
+        <Literal>Aguili</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Racer4"/>
-        <Literal datatypeIRI="&xsd;string">Japonaise</Literal>
+        <Literal>Japonaise</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Racer4"/>
-        <Literal datatypeIRI="&xsd;string">Hassen</Literal>
+        <Literal>Hassen</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Racer5"/>
-        <Literal datatypeIRI="&xsd;integer">21</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">21</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Racer5"/>
-        <Literal datatypeIRI="&xsd;string">Cheriaa</Literal>
+        <Literal>Cheriaa</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Racer5"/>
-        <Literal datatypeIRI="&xsd;string">Chinoise
+        <Literal>Chinoise
 </Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Racer5"/>
-        <Literal datatypeIRI="&xsd;string">Syrine</Literal>
+        <Literal>Syrine</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Racer6"/>
-        <Literal datatypeIRI="&xsd;integer">27</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">27</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Racer6"/>
-        <Literal datatypeIRI="&xsd;string">Benismail</Literal>
+        <Literal>Benismail</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Racer6"/>
-        <Literal datatypeIRI="&xsd;string">Australie</Literal>
+        <Literal>Australie</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Racer6"/>
-        <Literal datatypeIRI="&xsd;string">Kais
+        <Literal>Kais
 </Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Racer7"/>
-        <Literal datatypeIRI="&xsd;integer">22</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Racer7"/>
-        <Literal datatypeIRI="&xsd;string">Said</Literal>
+        <Literal>Said</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Racer7"/>
-        <Literal datatypeIRI="&xsd;string">Australie</Literal>
+        <Literal>Australie</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Racer7"/>
-        <Literal datatypeIRI="&xsd;string">Samer</Literal>
+        <Literal>Samer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Racer8"/>
-        <Literal datatypeIRI="&xsd;integer">22</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Racer8"/>
-        <Literal datatypeIRI="&xsd;string">Julie</Literal>
+        <Literal>Julie</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#personNationality"/>
         <NamedIndividual IRI="#Racer8"/>
-        <Literal datatypeIRI="&xsd;string">Australie</Literal>
+        <Literal>Australie</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#surname"/>
         <NamedIndividual IRI="#Racer8"/>
-        <Literal datatypeIRI="&xsd;string">Emilien</Literal>
+        <Literal>Emilien</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isFirstStage"/>
         <NamedIndividual IRI="#RandomStage1"/>
-        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isFirstStage"/>
         <NamedIndividual IRI="#RandomStage2"/>
-        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isFirstStage"/>
         <NamedIndividual IRI="#RandomStage3"/>
-        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isFirstStage"/>
         <NamedIndividual IRI="#RandomStage4"/>
-        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isFirstStage"/>
         <NamedIndividual IRI="#RandomStage5"/>
-        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isFirstStage"/>
         <NamedIndividual IRI="#RandomStage6"/>
-        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isFirstStage"/>
         <NamedIndividual IRI="#RandomStage7"/>
-        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isFirstStage"/>
         <NamedIndividual IRI="#RandomStage8"/>
-        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
     </DataPropertyAssertion>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#Organises"/>
         <ObjectProperty IRI="#OrganisedBy"/>
+        <ObjectProperty IRI="#Organises"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#contains"/>
         <ObjectProperty IRI="#belongsTo"/>
+        <ObjectProperty IRI="#contains"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isPartOf"/>
         <ObjectProperty IRI="#composedOf"/>
+        <ObjectProperty IRI="#isPartOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isMadeBy"/>
         <ObjectProperty IRI="#makes"/>
     </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#OrganisedBy"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#ParticipatesIn"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isAccountOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#wins"/>
+    </FunctionalObjectProperty>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#knows"/>
     </SymmetricObjectProperty>
@@ -1492,6 +1499,10 @@
         <ObjectProperty IRI="#referees"/>
         <Class IRI="#Referee"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#wins"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#OrganisedBy"/>
         <Class IRI="#Organiser"/>
@@ -1531,6 +1542,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#referees"/>
         <Class IRI="#Race"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#wins"/>
+        <Class IRI="#Medal"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#MessengerID"/>
@@ -1607,12 +1622,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#title</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Mr, Mrs, Ms, Dr, etc.
+        <Literal>Mr, Mrs, Ms, Dr, etc.
 </Literal>
     </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
 
